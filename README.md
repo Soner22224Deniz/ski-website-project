@@ -5,22 +5,28 @@ Our first GitHub repository.Web Design project
 
 #Structure
 <br>
+<br>
+
+
+
+
+```
 ski_project/
 │
-├── index.php                # Начална страница
-├── about.php                # Информация за ски спорта
-├── skiers.php               # Всички скиори
-├── skier.php                # Детайли за конкретен скиор
-├── lessons.php              # Форма за записване
-├── contact.php              # Контакти 
+├── index.php
+├── about.php
+├── skiers.php
+├── skier.php
+├── lessons.php
+├── contact.php
 │
 ├── includes/
-│   ├── header.php           # Navbar + Bootstrap
-│   ├── footer.php           # Footer
-│   ├── db.php               # Връзка с базата
-│   └── functions.php        # Помощни функции
+│   ├── header.php
+│   ├── footer.php
+│   ├── db.php
+│   └── functions.php
 │
-├── admin/                   
+├── admin/
 │   ├── dashboard.php
 │   ├── add_skier.php
 │   └── add_country.php
@@ -36,3 +42,4 @@ ski_project/
 │   └── background/
 │
 └── README.md
+```
