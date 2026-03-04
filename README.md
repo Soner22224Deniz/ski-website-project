@@ -4,7 +4,7 @@ Our first GitHub repository.Web Design project
 
 
 #Structure
-
+<br>
 ski_project/
 │
 ├── index.php                # Начална страница
