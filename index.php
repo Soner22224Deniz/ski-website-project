@@ -1,93 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlpineHub</title>
+<?php include "includes/header.php"; ?>
 
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.intro {
+    height: 100vh;
+    background: url('images/background/hero.jpg') center/cover no-repeat;
+    position: relative;
+}
 
-   
-    <style>
-        body {
-            scroll-behavior: smooth;
-        }
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
 
-        
-        .welcome {
-            height: 100vh;
-            background: url('images/background/welcome.jpg') center/cover no-repeat;
-            position: relative;
-        }
+.intro-content {
+    position: relative;
+    z-index: 2;
+}
 
-        .welcome-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-
-        .welcome-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        
-        section {
-            padding: 80px 0;
-        }
-    </style>
-</head>
-<body>
+section {
+    padding: 80px 0;
+}
+</style>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">AlpineHub</a>
+<section class="intro d-flex align-items-center justify-content-center text-white text-center">
+    <div class="overlay"></div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Home</a></li>
-                        <li><a class="dropdown-item" href="#">About</a></li>
-                        <li><a class="dropdown-item" href="#">Skiers</a></li>
-                        <li><a class="dropdown-item" href="#">Lessons</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-<section class="welcome d-flex align-items-center justify-content-center text-center text-white">
-    <div class="welcome-overlay"></div>
-
-    <div class="welcome-content">
+    <div class="intro-content">
         <h1 class="display-3">Welcome</h1>
-        <p class="lead">Short introduction here</p>
-        <a href="#" class="btn btn-primary btn-lg mt-3">Action Button</a>
+        <p class="lead">Short intro text...</p>
+        <a href="lessons.php" class="btn btn-primary mt-3">Get Started</a>
     </div>
 </section>
 
 
 <section class="bg-light text-center">
     <div class="container">
-        <h2>About Section</h2>
+        <h2>About Ski Culture</h2>
         <p>Placeholder text...</p>
     </div>
 </section>
@@ -95,18 +46,31 @@
 
 <section class="text-center">
     <div class="container">
-        <h2>More Information</h2>
-        <p>Placeholder content...</p>
+        <h2>Famous Skiers</h2>
+
+        <div class="row mt-4">
+            <div class="col-md-4">Card</div>
+            <div class="col-md-4">Card</div>
+            <div class="col-md-4">Card</div>
+        </div>
     </div>
 </section>
 
 
-<footer class="bg-dark text-white text-center py-3">
-    <p>© 2026 AlpineHub</p>
-</footer>
+<section class="bg-light text-center">
+    <div class="container">
+        <h2>Equipment Stores</h2>
+        <a href="#" class="btn btn-outline-dark m-2">Store 1</a>
+        <a href="#" class="btn btn-outline-dark m-2">Store 2</a>
+    </div>
+</section>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section class="text-center">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Phone: +000 000 000</p>
+    </div>
+</section>
 
-</body>
-</html>
+<?php include "includes/footer.php"; ?>
