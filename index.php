@@ -1,5 +1,5 @@
 <?php
-session_start();
+include "includes/header.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_cart'])) {
 
@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_cart'])) {
     exit();
 }
 
-include "includes/header.php";
 ?>
 
 
