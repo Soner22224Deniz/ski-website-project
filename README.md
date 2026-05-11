@@ -1,4 +1,4 @@
-# Проект-Сайт-За-Ски
+# Проект-Сайт-Ски-Магазин
 
 
 
@@ -11,33 +11,33 @@
 
 
 ```
-ski_project/
+ski-project/
 │
-├── index.php
-├── about.php
-├── skiers.php
-├── skier.php
-├── lessons.php
-├── contact.php
+├── index.php              
+├── lessons.php            
+├── shop.php               
+├── product.php           
+├── cart.php              
+├── checkout.php          
+├── contact.php            
+│
+├── auth/
+│   ├── login.php          
+│   ├── register.php       
+│   ├── logout.php         
 │
 ├── includes/
 │   ├── header.php
 │   ├── footer.php
-│   ├── db.php
-│   └── functions.php
-│
-├── admin/
-│   ├── dashboard.php
-│   ├── add_skier.php
-│   └── add_country.php
+│   ├── db.php             
+│   ├── functions.php      
+│   └── auth.php           
 │
 ├── css/
 │   └── style.css
-│   
 │
 ├── images/
-│   ├── skiers/
-│   └── background/
+│   └── products/
 │
 └── README.md
 ```
