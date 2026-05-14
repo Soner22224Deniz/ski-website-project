@@ -1,59 +1,78 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    header("Location: index.php");
-    exit();
-}
+include "includes/header.php";
 
+$success = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $success = true;
+}
 ?>
 
-<?php include "includes/header.php"; ?>
+<div class="container pt-5">
 
-<div class="container mt-5 pt-5">
     <h1 class="text-center mb-4">Book a Ski Lesson</h1>
 
-    <form method="POST" action="">
+    <?php if ($success): ?>
 
-        
-        <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-control" required>
+        <div class="alert alert-success text-center">
+            <h4>Success! Lesson Booked 🎿</h4>
+            <p>You will be redirected to the homepage shortly.</p>
         </div>
 
        
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" required>
+        <script>
+            setTimeout(function() {
+                window.location.href = "index.php";
+            }, 3000);
+        </script>
+
+    <?php else: ?>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card p-4 shadow-sm">
+                    <h4 class="mb-3 text-center">Enter Your Details</h4>
+
+                    <form method="POST">
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Preferred Date</label>
+                            <input type="date" name="date" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Skill Level</label>
+                            <select name="level" class="form-select">
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100">
+                            Book Lesson
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
         </div>
 
-     
-        <div class="mb-3">
-            <label class="form-label">Phone (optional)</label>
-            <input type="text" name="phone" class="form-control">
-        </div>
+    <?php endif; ?>
 
-      
-        <div class="mb-3">
-            <label class="form-label">Preferred Date</label>
-            <input type="date" name="date" class="form-control" required>
-        </div>
-
-       
-        <div class="mb-3">
-            <label class="form-label">Skill Level</label>
-            <select name="level" class="form-select" required>
-                <option value="">Select level</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
-        </div>
-
-       
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-
-    </form>
 </div>
 
 <?php include "includes/footer.php"; ?>
